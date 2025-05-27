@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job</title>
+</head>
+<body>
+    <h1>Post a Job</h1>
+    <form action="{{ url_for('post_job') }}" method="post">
+        <label for="house_number">House Number:</label>
+        <input type="text" name="house_number" required><br>
+        <label for="street">Street:</label>
+        <input type="text" name="street" required><br>
+        <label for="city">City:</label>
+        <input type="text" name="city" required><br>
+        <label for="caregiving_type">Caregiving Type Requirement:</label>
+        <input type="text" name="caregiving_type" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

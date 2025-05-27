@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Job</title>
+</head>
+<body>
+    <h1>Search for Job</h1>
+    <ul>
+        {% for job in jobs %}
+            <li><a href="{{ url_for('apply_to_job', job_index=loop.index-1) }}">{{ job }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
